@@ -1,6 +1,6 @@
 package Medlemmer;
 
-public class konkurrencemedlem extends Medlem {
+public class KonkurrenceMedlem extends Medlem {
   double konkurrenceTid;
   double træningsTid;
 
