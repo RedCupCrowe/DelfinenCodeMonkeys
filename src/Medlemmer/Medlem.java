@@ -1,12 +1,11 @@
 package Medlemmer;
 
-abstract public class Medlem {
+public class Medlem {
   private String navn;
   private int alder;
   private boolean aktivStatus;
   private double medlemsnummer;
   private boolean iRestance;
-
 
 
   public Medlem (String navn, int alder, boolean aktivStatus, double medlemsnummer, boolean iRestance){
@@ -65,7 +64,19 @@ abstract public class Medlem {
             "Alder" + getAlder() + "\n" + "Aktiv Status" + getAktivStatus() + "\n" +
             "Medlemsnummer" + getMedlemsnummer() + "\n" + " I restance" + getIRestance();
   }
+ public int getKontingent(){
+    if (getAktivStatus() == false){
+      return 500;
 
+    }
+    if (getAlder() < 18){
+      return 1000;
+    }else if(getAlder() > 60){
+      return 1200;
+   }else{
+      return 1600;
+    }
+ }
 
 
 

@@ -17,6 +17,15 @@ public class MedlemsListe {
   public static void removeMedlem (Medlem medlem) {
     medlemsListe.remove(medlem);
   }
+  public static ArrayList<KonkurrenceMedlem> getKonkurrenceMedlemmer(){
+    ArrayList<KonkurrenceMedlem> result = new ArrayList<>();
+    for (Medlem m: medlemsListe){
+      if (m instanceof KonkurrenceMedlem){
+        result.add((KonkurrenceMedlem) m);
+      }
+    }
+    return result;
+  }
 
 
 
