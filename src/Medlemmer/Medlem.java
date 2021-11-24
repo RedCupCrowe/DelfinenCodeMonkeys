@@ -3,6 +3,8 @@ package Medlemmer;
 public class Medlem {
   private String navn;
   private int alder;
+  private boolean overAtten; // slet over18 hvis vi ikke bruger den
+  private String medlemstype;
   private boolean aktivStatus;
   private int medlemsnummer;
   private boolean iRestance;
@@ -15,6 +17,15 @@ public class Medlem {
     this.aktivStatus = aktivStatus;
     this.medlemsnummer = medlemsnummer;
     this.iRestance = iRestance;
+
+    if (alder >= 18 ){
+      overAtten = true;
+      medlemstype = "senior";
+    } else {
+      overAtten = false;
+      medlemstype = "junior";
+    }
+
 
 
   }
@@ -44,7 +55,7 @@ public class Medlem {
   public void setMedlemsnummer(int medlemsnummer){
     this.medlemsnummer = medlemsnummer;
   }
-  public double getMedlemsnummer(){
+  public int getMedlemsnummer(){
     return medlemsnummer;
 
   }
@@ -61,7 +72,7 @@ public class Medlem {
   @Override
   public String toString(){
     return "Medlem" + "\n" + "Navn: " + getNavn() + "\n" +
-            "Alder: " + getAlder() + "\n" + "Aktiv Status: " + getAktivStatus() + "\n" +
+            "Alder: " + getAlder() + "\n" + "Medlemstype: "+ medlemstype + "\n" + "Aktiv Status: " + getAktivStatus() + "\n" +
             "Medlemsnummer: " + getMedlemsnummer() + "\n" + " I restance: " + getIRestance();
   }
  public int getKontingent(){
@@ -77,6 +88,10 @@ public class Medlem {
       return 1600;
     }
  }
+
+
+
+
 
 
 
