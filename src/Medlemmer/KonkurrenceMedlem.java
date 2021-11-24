@@ -12,7 +12,7 @@ public class KonkurrenceMedlem extends Medlem {
   private ArrayList<KonkurrenceResultat> konkurrenceResultater = new ArrayList<>();
 
   //butterfly,crawl,rygcrawl og brystsvømning
-  public KonkurrenceMedlem(String navn, int alder, boolean aktivStatus, double medlemsnummer, boolean iRestance) {
+  public KonkurrenceMedlem(String navn, int alder, boolean aktivStatus, int medlemsnummer, boolean iRestance) {
     super(navn, alder, aktivStatus, medlemsnummer, iRestance);
   }
 

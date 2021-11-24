@@ -4,11 +4,11 @@ public class Medlem {
   private String navn;
   private int alder;
   private boolean aktivStatus;
-  private double medlemsnummer;
+  private int medlemsnummer;
   private boolean iRestance;
 
 
-  public Medlem (String navn, int alder, boolean aktivStatus, double medlemsnummer, boolean iRestance){
+  public Medlem (String navn, int alder, boolean aktivStatus, int medlemsnummer, boolean iRestance){
 
     this.navn = navn;
     this.alder = alder;
@@ -41,7 +41,7 @@ public class Medlem {
     return aktivStatus;
   }
 
-  public void setMedlemsnummer(double medlemsnummer){
+  public void setMedlemsnummer(int medlemsnummer){
     this.medlemsnummer = medlemsnummer;
   }
   public double getMedlemsnummer(){
