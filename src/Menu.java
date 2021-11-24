@@ -57,7 +57,7 @@ public class Menu {
       case 1:
         KonkurrenceMedlem medlem = Formand.opretMedlem();
         liste.addMedlem(medlem);
-
+        System.out.println(liste.getMedlemmer());
 
         break;
       case 2:

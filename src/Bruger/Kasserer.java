@@ -1,5 +1,6 @@
 package Bruger;
-import java.util.Scanner;
+
+import Medlemmer.Medlem;
 
 public class Kasserer {
     /*
@@ -9,15 +10,7 @@ public class Kasserer {
     For passivt medlemskab er taksten 500kr. årligt. Kassereren vil gerne kunne danne sig et overblik over hvor meget klubben kan forvente at få indbetalt i kontingent i alt.
     Kassereren har desuden ønsket, at systemet kan vise en oversigt over medlemmer, der er i restance.
     */
-int kontingentUngdom = 1000;
-int kontingentSenior = 1600;
-int kontingentOldings = 1200;
-
-if (alder < 18) {
-        System.out.println("Kontingent er " + kontingentUngdom);
-    } else if (alder > 18 && alder < 60){
-        System.out.println("Kontingent er " + kontingentSenior);
-    } else {
-        System.out.println("Kontingent er " + kontingentOldings);
-    }
+/*Medlem Kasserer = new Medlem();
+*/
 }
+
