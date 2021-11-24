@@ -60,9 +60,9 @@ public class Medlem {
 
   @Override
   public String toString(){
-    return "Medlem" + "\n" + "Navn" + getNavn() + "\n" +
-            "Alder" + getAlder() + "\n" + "Aktiv Status" + getAktivStatus() + "\n" +
-            "Medlemsnummer" + getMedlemsnummer() + "\n" + " I restance" + getIRestance();
+    return "Medlem" + "\n" + "Navn: " + getNavn() + "\n" +
+            "Alder: " + getAlder() + "\n" + "Aktiv Status: " + getAktivStatus() + "\n" +
+            "Medlemsnummer: " + getMedlemsnummer() + "\n" + " I restance: " + getIRestance();
   }
  public int getKontingent(){
     if (getAktivStatus() == false){

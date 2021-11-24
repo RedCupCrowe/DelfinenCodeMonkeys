@@ -15,23 +15,23 @@ public class Menu {
   public static void main(String[] args) {
     while (true) {
       System.out.println("------------KOMMANDOER------------");
-      System.out.println("formand      = gå til formandsmenu");
-      System.out.println("kasserer     = gå til kasserermenu");
-      System.out.println("trænermenu   = gå til trænermenu");
+      System.out.println("1. formand      = gå til formandsmenu");
+      System.out.println("2. kasserer     = gå til kasserermenu");
+      System.out.println("3. trænermenu   = gå til trænermenu");
       System.out.println("Skriv en af ovenstående kommandoer:\n");
       String command = scan.nextLine();
       System.out.println(command);
 
       switch (command.toLowerCase()) {
-        case "formand": formandMenu();
+        case "formand", "1": formandMenu();
 
 
           //formandsmenu
           break;
-        case "kasserer": kassererMenu();
+        case "kasserer", "2": kassererMenu();
           //kasserermenu
           break;
-        case "træner": trænerMenu();
+        case "træner", "3": trænerMenu();
           //trænermenu
           break;
         default:
