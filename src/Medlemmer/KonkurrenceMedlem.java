@@ -8,7 +8,7 @@ public class KonkurrenceMedlem extends Medlem {
   private double konkurrenceTid;
   private double træningsTid;
   private TræningsResultat butterflyTid;
-  private TræningsResultat rygcrawlTid;
+  private TræningsResultat rygCrawlTid;
   private TræningsResultat crawlTid;
   private TræningsResultat brystTid;
   private ArrayList<KonkurrenceResultat> konkurrenceResultater = new ArrayList<>();
@@ -18,7 +18,7 @@ public class KonkurrenceMedlem extends Medlem {
     super(navn, alder, aktivStatus, medlemsnummer, iRestance);
   }
 
-  public void tilmedDisciplin() {
+  public void tilmeldDisciplin() {
 
   }
 
@@ -32,6 +32,18 @@ public class KonkurrenceMedlem extends Medlem {
   public void registrerCrawlTid(TræningsResultat resultat) {
     if (crawlTid == null || crawlTid.getSvømmetid() > resultat.getSvømmetid()) {
       this.crawlTid = resultat;
+    }
+  }
+
+  public void registrerRygCrawlTid(TræningsResultat resultat) {
+    if (rygCrawlTid == null || rygCrawlTid.getSvømmetid() > resultat.getSvømmetid()) {
+      this.rygCrawlTid = resultat;
+    }
+  }
+
+  public void registrerButterflyTid(TræningsResultat resultat) {
+    if (butterflyTid == null || butterflyTid.getSvømmetid() > resultat.getSvømmetid()) {
+      this.butterflyTid = resultat;
     }
   }
 
