@@ -4,9 +4,7 @@ import Medlemmer.KonkurrenceMedlem;
 import Medlemmer.Medlem;
 
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class Formand {
     static Scanner scan = new Scanner(System.in);
