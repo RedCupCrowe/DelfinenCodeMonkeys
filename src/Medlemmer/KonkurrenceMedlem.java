@@ -1,5 +1,7 @@
 package Medlemmer;
 
+import Bruger.Formand;
+
 import java.util.ArrayList;
 
 public class KonkurrenceMedlem extends Medlem {
@@ -24,6 +26,7 @@ public class KonkurrenceMedlem extends Medlem {
     if (brystTid == null || brystTid.getSvømmetid() > resultat.getSvømmetid()) {
       this.brystTid = resultat;
     }
+
   }
 
   public void registrerCrawlTid(TræningsResultat resultat) {

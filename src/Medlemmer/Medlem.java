@@ -1,5 +1,7 @@
 package Medlemmer;
 
+import java.util.ArrayList;
+
 public class Medlem {
   private String navn;
   private int alder;
@@ -8,6 +10,8 @@ public class Medlem {
   private boolean aktivStatus;
   private int medlemsnummer;
   private boolean iRestance;
+
+
 
 
   public Medlem (String navn, int alder, boolean aktivStatus, int medlemsnummer, boolean iRestance){

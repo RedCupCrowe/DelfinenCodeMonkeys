@@ -1,63 +1,31 @@
 import Bruger.Formand;
 import Medlemmer.KonkurrenceMedlem;
+import Medlemmer.Medlem;
 import Medlemmer.MedlemsListe;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class Menu {
 
 
-  static Scanner scan = new Scanner(System.in);
-
- static public MedlemsListe liste = new MedlemsListe();
-
-  public static void main(String[] args) {
-    while (true) {
-      System.out.println("------------KOMMANDOER------------");
-      System.out.println("1. formand      = gå til formandsmenu");
-      System.out.println("2. kasserer     = gå til kasserermenu");
-      System.out.println("3. trænermenu   = gå til trænermenu");
-      System.out.println("Skriv en af ovenstående kommandoer:\n");
-      String command = scan.nextLine();
-      System.out.println(command);
-
-      switch (command.toLowerCase()) {
-        case "formand", "1": formandMenu();
 
 
-          //formandsmenu
-          break;
-        case "kasserer", "2": kassererMenu();
-          //kasserermenu
-          break;
-        case "træner", "3": trænerMenu();
-          //trænermenu
-          break;
-        default:
-          //Nedenstående skrives ud hvis du ikke skriver en af kommandoerne
-          System.out.println("Det forstår jeg ikke.");
-          break;
-      }
-
-    }
-
-  }
-
-
-
-  private static void formandMenu() {
+  public void formandMenu(Scanner scan) {
     System.out.println("Tryk 1 for at oprette medlem");
     System.out.println("Tryk 2 for at gå tilbage");
 
+    Formand formand = new Formand();
     int indtastFormand = scan.nextInt();
     System.out.println(indtastFormand);
 
     switch (indtastFormand) {
       case 1:
-        KonkurrenceMedlem medlem = Formand.opretMedlem();
-        liste.addMedlem(medlem);
-        System.out.println(liste.getMedlemmer());
+        Medlem m = formand.opretMedlem();
+        MedlemsListe.addMedlem(m);
+        System.out.println(MedlemsListe.getMedlemmer());
 
         break;
       case 2:
@@ -67,7 +35,7 @@ public class Menu {
   }
 
 
-  private static void kassererMenu() {
+  public void kassererMenu(Scanner scan) {
     System.out.println("Tryk 1 for kontingent");
     System.out.println("Tryk 2 for oversigt over medlem i restance");
     System.out.println("Tryk 3 for at gå tilbage");
@@ -87,7 +55,7 @@ public class Menu {
     }
   }
 
-  private static void trænerMenu() {
+  public static void trænerMenu(Scanner scan) {
     System.out.println("Tryk 1 for registrere træningsrestultat");
 
     int indtastTræner = scan.nextInt();
@@ -95,7 +63,7 @@ public class Menu {
 
     switch (indtastTræner) {
 
-      case 1: svømmedisciplin();
+      case 1: svømmedisciplin(scan);
         break;
 
       default:
@@ -103,7 +71,7 @@ public class Menu {
     }
   }
 
-  private static void svømmedisciplin() {
+  private static void svømmedisciplin(Scanner scan) {
     System.out.println("Tryk 1 for registrere butterfly");
     System.out.println("Tryk 2 for registrere crawl");
     System.out.println("Tryk 3 for registrere rygcrawl");

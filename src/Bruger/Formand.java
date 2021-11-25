@@ -1,13 +1,14 @@
 package Bruger;
 
 import Medlemmer.KonkurrenceMedlem;
+import Medlemmer.Medlem;
 
 import java.util.Scanner;
 
 public class Formand {
     static Scanner scan = new Scanner(System.in);
 
-    public static KonkurrenceMedlem opretMedlem(){
+    public Medlem opretMedlem(){
         System.out.println("Navn: " );
         String navn = scan.nextLine();
 
@@ -24,7 +25,7 @@ public class Formand {
         boolean restance = scan.nextBoolean();
 
 
-        KonkurrenceMedlem medlem = new KonkurrenceMedlem( navn, alder, aktiv,medlemsnummer, restance);
+        Medlem medlem = new Medlem( navn, alder, aktiv,medlemsnummer, restance);
         return medlem;
     }
 
