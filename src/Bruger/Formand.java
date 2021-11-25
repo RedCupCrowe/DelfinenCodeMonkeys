@@ -57,7 +57,12 @@ public class Formand {
             Scanner scan = new Scanner(new File("filename.txt"));
             while(scan.hasNextLine()){
                 String navn = scan.next();
-
+                String alder = scan.next();
+                String aktiv = scan.next();
+                String medlemsnummer = scan.next();
+                String restance = scan.next();
+                //TODO: formattering
+                System.out.println(navn + alder + aktiv + medlemsnummer + restance);
             }
         }catch (Exception e){
 

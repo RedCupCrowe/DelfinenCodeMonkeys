@@ -16,6 +16,7 @@ public class Menu {
 
 
   public void formandMenu(Scanner scan) {
+    //TODO: opdater
     System.out.println("Tryk 1 for at oprette medlem");
     System.out.println("Tryk 2 for at gå tilbage");
 
@@ -26,10 +27,12 @@ public class Menu {
     switch (indtastFormand) {
       case 1:
         Medlem m = formand.opretMedlem();
-        formand.læsListe();
 
         break;
       case 2:
+        formand.læsListe();
+        break;
+      case 3:
         break;
       default:
     }
