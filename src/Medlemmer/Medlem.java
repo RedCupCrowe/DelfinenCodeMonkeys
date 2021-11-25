@@ -64,6 +64,8 @@ public class Medlem {
 
   }
 
+
+
   public void setIRestance(boolean iRestance){
     this.iRestance = iRestance;
 

@@ -2,6 +2,7 @@ package Bruger;
 
 import Medlemmer.KonkurrenceMedlem;
 import Medlemmer.Medlem;
+import Medlemmer.MedlemsListe;
 
 import java.util.Scanner;
 import java.io.*;
@@ -25,12 +26,22 @@ public class Formand {
 
         System.out.println("Restance: ");
         boolean restance = scan.nextBoolean();
+        scan.nextLine();
 
         Medlem medlem = new Medlem( navn, alder, aktiv,medlemsnummer, restance);
-
+        MedlemsListe.addMedlem(medlem);
+        System.out.println(MedlemsListe.medlemsListe);
         try {
+            String listeMedMedlemmer = "";
             FileWriter writer = new FileWriter("filename.txt");
-            writer.write(navn + "\n" + alder + "\n" + aktiv + "\n" + medlemsnummer + "\n" + restance);
+            for (Medlem m: MedlemsListe.medlemsListe){
+                listeMedMedlemmer += m.getNavn() + " "
+                    + m.getAlder() + " "
+                    + m.getAktivStatus() + " " +
+                    m.getMedlemsnummer() + " "
+                    + m.getIRestance() + "\n";
+            }
+            writer.write(listeMedMedlemmer);
             writer.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
@@ -40,6 +51,17 @@ public class Formand {
 
 
         return medlem;
+    }
+    public void læsListe(){
+        try {
+            Scanner scan = new Scanner(new File("filename.txt"));
+            while(scan.hasNextLine()){
+                String navn = scan.next();
+
+            }
+        }catch (Exception e){
+
+        }
     }
 
 

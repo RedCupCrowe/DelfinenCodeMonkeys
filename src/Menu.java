@@ -26,8 +26,7 @@ public class Menu {
     switch (indtastFormand) {
       case 1:
         Medlem m = formand.opretMedlem();
-        MedlemsListe.addMedlem(m);
-        System.out.println(MedlemsListe.getMedlemmer());
+        formand.læsListe();
 
         break;
       case 2:
