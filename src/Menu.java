@@ -44,10 +44,10 @@ public class Menu {
     System.out.println("Tryk 2 for oversigt over medlem i restance");
     System.out.println("Tryk 3 for at gå tilbage");
 
-    int indtastkassere = scan.nextInt();
-    System.out.println(indtastkassere);
+    int indtastKasserer = scan.nextInt();
+    System.out.println(indtastKasserer);
 
-    switch (indtastkassere) {
+    switch (indtastKasserer) {
 
       case 1:
         break;
@@ -61,6 +61,7 @@ public class Menu {
 
   public static void trænerMenu(Scanner scan) {
     System.out.println("Tryk 1 for registrere træningsrestultat");
+    System.out.println("Tryk 2 for at gå tilbage");
 
     int indtastTræner = scan.nextInt();
     System.out.println(indtastTræner);
@@ -68,6 +69,8 @@ public class Menu {
     switch (indtastTræner) {
 
       case 1: svømmedisciplin(scan);
+        break;
+      case 2:
         break;
 
       default:

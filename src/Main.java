@@ -25,9 +25,9 @@ public class Main {
         }
         while (true) {
             System.out.println("------------KOMMANDOER------------");
-            System.out.println("1. formand      = gå til formandsmenu");
-            System.out.println("2. kasserer     = gå til kasserermenu");
-            System.out.println("3. trænermenu   = gå til trænermenu");
+            System.out.println("1. Formand      = gå til formandsmenu");
+            System.out.println("2. Kasserer     = gå til kasserermenu");
+            System.out.println("3. Trænermenu   = gå til trænermenu");
             System.out.println("Skriv en af ovenstående kommandoer:\n");
             String command = scan.nextLine();
             System.out.println(command);
