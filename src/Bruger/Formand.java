@@ -2,7 +2,7 @@ package Bruger;
 
 import Medlemmer.KonkurrenceMedlem;
 import Medlemmer.Medlem;
-import Medlemmer.MedlemsListe;
+import Other.Storage;
 
 import java.util.Scanner;
 import java.io.*;
@@ -29,45 +29,51 @@ public class Formand {
         scan.nextLine();
 
         Medlem medlem = new Medlem( navn, alder, aktiv,medlemsnummer, restance);
-        MedlemsListe.addMedlem(medlem);
-        System.out.println(MedlemsListe.medlemsListe);
-        try {
-            String listeMedMedlemmer = "";
-            FileWriter writer = new FileWriter("filename.txt");
-            for (Medlem m: MedlemsListe.medlemsListe){
-                listeMedMedlemmer += m.getNavn() + " "
-                    + m.getAlder() + " "
-                    + m.getAktivStatus() + " " +
-                    m.getMedlemsnummer() + " "
-                    + m.getIRestance() + "\n";
+        Storage.addMedlem(medlem);
+        System.out.println(Storage.getMedlemmer());
+
+        return medlem;
+    }
+    public KonkurrenceMedlem opretKonkurrenceMedlem(){
+        System.out.println("Navn: " );
+        String navn = scan.nextLine();
+
+        System.out.println("Alder: " );
+        int alder = scan.nextInt();
+
+        System.out.println("Aktiv Status: " );
+        boolean aktiv = scan.nextBoolean();
+
+        System.out.println("Medlemsnummer: " );
+        int medlemsnummer = scan.nextInt();
+
+        System.out.println("Restance: ");
+        boolean restance = scan.nextBoolean();
+        scan.nextLine();
+
+        KonkurrenceMedlem medlem = new KonkurrenceMedlem( navn, alder, aktiv,medlemsnummer, restance);
+        boolean loop = true;
+        while (loop == true){
+            System.out.println("vælg disciplin at tilmelde:");
+            System.out.println("1: butterfly");
+            System.out.println("2: crawl");
+            System.out.println("3: rygcrawl");
+            System.out.println("4: bryst");
+            System.out.println("0: afslut tilmelding");
+            int værdi = Integer.parseInt(scan.nextLine());
+            if(værdi == 0){
+                loop = false;
+            }else {
+                //TODO: håndter fejlværdier.
+                medlem.tilmeldDisciplin(værdi);
             }
-            writer.write(listeMedMedlemmer);
-            writer.close();
-            System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
         }
+
+        Storage.addMedlem(medlem);
+        System.out.println(Storage.getMedlemmer());
 
 
         return medlem;
     }
-    public void læsListe(){
-        try {
-            Scanner scan = new Scanner(new File("filename.txt"));
-            while(scan.hasNextLine()){
-                String navn = scan.next();
-                String alder = scan.next();
-                String aktiv = scan.next();
-                String medlemsnummer = scan.next();
-                String restance = scan.next();
-                //TODO: formattering
-                System.out.println(navn + alder + aktiv + medlemsnummer + restance);
-            }
-        }catch (Exception e){
-
-        }
-    }
-
 
 }

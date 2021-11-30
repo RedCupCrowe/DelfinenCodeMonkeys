@@ -1,28 +1,13 @@
 import Medlemmer.MedlemsListe;
+import Other.Storage;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Scanner;
 
-public class Main {
+public class Main{
     static Scanner scan = new Scanner(System.in);
-
-    static public MedlemsListe liste = new MedlemsListe();
-
     public static void main(String[] args) {
-        Menu menu = new Menu();
+        Storage.loadStorage();
 
-        try {
-            File myObj = new File("filename.txt");
-            if (myObj.createNewFile()) {
-                System.out.println("File created: " + myObj.getName());
-            } else {
-                System.out.println("File already exists.");
-            }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
-        }
         while (true) {
             System.out.println("------------KOMMANDOER------------");
             System.out.println("1. Formand      = gå til formandsmenu");
@@ -33,19 +18,28 @@ public class Main {
             System.out.println(command);
 
             switch (command.toLowerCase()) {
-                case "formand", "1" -> menu.formandMenu(scan);
-
+                case "formand":
+                case "1" :
+                    Menu.formandMenu(scan);
+                    break;
 
                 //formandsmenu
-                case "kasserer", "2" -> menu.kassererMenu(scan);
+                case "kasserer":
+                case    "2" :
+                    Menu.kassererMenu(scan);
+                    break;
 
                 //kasserermenu
-                case "træner", "3" -> menu.trænerMenu(scan);
-
+                case "træner":
+                case  "3" :
+                    Menu.trænerMenu(scan);
+                    break;
                 //trænermenu
-                default ->
+
+                default:
                     //Nedenstående skrives ud hvis du ikke skriver en af kommandoerne
                     System.out.println("Det forstår jeg ikke.");
+
             }
 
         }

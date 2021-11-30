@@ -3,21 +3,25 @@ package Medlemmer;
 import java.util.ArrayList;
 
 public class MedlemsListe {
-  // Brug af static simulerer en database.
-  public static ArrayList<Medlem> medlemsListe = new ArrayList<>();
 
-  public static void addMedlem (Medlem medlem) {
+  private ArrayList<Medlem> medlemsListe;
+
+  public MedlemsListe(){
+    medlemsListe = new ArrayList<>();
+  }
+
+  public void addMedlem (Medlem medlem) {
     medlemsListe.add(medlem);
   }
 
-  public static ArrayList<Medlem> getMedlemmer(){
+  public ArrayList<Medlem> getMedlemmer(){
     return medlemsListe;
   }
 
-  public static void removeMedlem (Medlem medlem) {
+  public void removeMedlem (Medlem medlem) {
     medlemsListe.remove(medlem);
   }
-  public static ArrayList<KonkurrenceMedlem> getKonkurrenceMedlemmer(){
+  public ArrayList<KonkurrenceMedlem> getKonkurrenceMedlemmer(){
     ArrayList<KonkurrenceMedlem> result = new ArrayList<>();
     for (Medlem m: medlemsListe){
       if (m instanceof KonkurrenceMedlem){

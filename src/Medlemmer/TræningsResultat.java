@@ -15,4 +15,8 @@ public class TræningsResultat {
     public double getSvømmetid() {
         return svømmetid;
     }
+    public String skrivResultat(){
+        String trainResult = getDato() + "," + getSvømmetid();
+        return trainResult;
+    }
 }
