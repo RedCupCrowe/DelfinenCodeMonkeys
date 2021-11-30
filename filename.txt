@@ -1,1 +1,1 @@
-Valdemar 25 true 5 true
+Valdemar 2 true 23 true

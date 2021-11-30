@@ -12,5 +12,9 @@ public class Kasserer {
     */
 /*Medlem Kasserer = new Medlem();
 */
+  //TODO: Kasserer skal kunne se en oversigt over medlemmer i restance.
+  //TODO: Kasserer skal kunne se en udregning over hvor meget de kan forvente at få indbetalt i kontingent (dvs. uden dem der er i restance).
+
+
 }
 

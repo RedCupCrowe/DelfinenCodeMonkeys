@@ -2,15 +2,18 @@ import Bruger.Formand;
 import Medlemmer.KonkurrenceMedlem;
 import Medlemmer.Medlem;
 import Medlemmer.MedlemsListe;
+import Medlemmer.TræningsResultat;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
+import javax.annotation.processing.SupportedAnnotationTypes;
+import java.util.*;
 import java.io.File;
 import java.io.IOException;
 
 public class Menu {
+  //TODO: Menuerne skal forbindes.
+  //TODO: Gøre så listen med medlemmer ikke bliver slettet hver gang vi genstarter programmet.
+  //TODO: Gøre så vi kan åbne filen uden for IntelliJ.
+
 
 
 
@@ -85,6 +88,7 @@ public class Menu {
     switch (indtastTræner1) {
 
       case 1:
+
         break;
       case 2:
         break;

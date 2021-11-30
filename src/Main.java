@@ -27,7 +27,7 @@ public class Main {
             System.out.println("------------KOMMANDOER------------");
             System.out.println("1. formand      = gå til formandsmenu");
             System.out.println("2. kasserer     = gå til kasserermenu");
-            System.out.println("3. trænermenu   = gå til trænermenu");
+            System.out.println("3. træner       = gå til trænermenu");
             System.out.println("Skriv en af ovenstående kommandoer:\n");
             String command = scan.nextLine();
             System.out.println(command);
@@ -43,9 +43,9 @@ public class Main {
                 case "træner", "3" -> menu.trænerMenu(scan);
 
                 //trænermenu
-                default ->
+                default -> {
                     //Nedenstående skrives ud hvis du ikke skriver en af kommandoerne
-                    System.out.println("Det forstår jeg ikke.");
+                }
             }
 
         }

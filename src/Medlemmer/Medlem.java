@@ -84,7 +84,6 @@ public class Medlem {
  public int getKontingent(){
     if (getAktivStatus() == false){
       return 500;
-
     }
     if (getAlder() < 18){
       return 1000;
