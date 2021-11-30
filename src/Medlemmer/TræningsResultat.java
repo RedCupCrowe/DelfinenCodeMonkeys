@@ -19,4 +19,10 @@ public class TræningsResultat {
         String trainResult = getDato() + "," + getSvømmetid();
         return trainResult;
     }
+    public static TræningsResultat parseTræningsResultat(String s){
+        String[] params = s.split(",");
+        double dato = Double.parseDouble(params[0]);
+        double tid = Double.parseDouble(params[1]);
+        return new TræningsResultat(dato,tid);
+    }
 }

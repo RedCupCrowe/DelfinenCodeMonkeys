@@ -22,7 +22,11 @@ public class KonkurrenceMedlem extends Medlem {
   public static KonkurrenceMedlem parseKonkurrenceMedlem(String str){
     String[] params = str.split(":");
     KonkurrenceMedlem medlem = new KonkurrenceMedlem(params[0], Integer.parseInt(params[1]),Boolean.parseBoolean(params[2]), Integer.parseInt(params[3]), Boolean.parseBoolean(params[4]));
-
+    medlem.registrerButterflyTid(TræningsResultat.parseTræningsResultat(params[5]));
+    medlem.registrerCrawlTid(TræningsResultat.parseTræningsResultat(params[6]));
+    medlem.registrerRygCrawlTid(TræningsResultat.parseTræningsResultat(params[7]));
+    medlem.registrerBrystTid(TræningsResultat.parseTræningsResultat(params[8]));
+    medlem.registrerKonkurrenceResultat();
     return medlem;
   }
 
