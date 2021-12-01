@@ -2,29 +2,42 @@ import Bruger.Formand;
 import Medlemmer.KonkurrenceMedlem;
 import Medlemmer.Medlem;
 import Medlemmer.MedlemsListe;
-import Medlemmer.TræningsResultat;
+import Other.Storage;
 
-import javax.annotation.processing.SupportedAnnotationTypes;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 
 public class Menu {
-  //TODO: Menuerne skal forbindes.
-  //TODO: Gøre så listen med medlemmer ikke bliver slettet hver gang vi genstarter programmet.
-  //TODO: Gøre så vi kan åbne filen uden for IntelliJ.
+
+  /*
+Træner skal kunne registrere discipliner på konkurrencemedlemmer.
+Kasserer skal kunne se en oversigt over medlemmer i restance.
+Kasserer skal kunne se en udregning over hvor meget de kan forvente at få indbetalt i kontingent (dvs. uden dem der er i restance).
+TODO: Menuerne skal forbindes. ved hvordan laves, skal bare gøres.
+Et kig på grasp.
+Mulighed for træner for at se top 5 for hver svømmedisciplin fordelt på henholdsvis junior- og seniorsvømmere.
+registrere stævne- og træningstider og forbinde dem til hvert medlem.
+Gøre så listen med medlemmer ikke bliver slettet hver gang vi genstarter programmet.
+Gøre så vi kan åbne filen uden for IntelliJ.
+Sørge for at formanden kan ændre i medlem. Evt. bare sørge for at man kan slette medlemmer.
+
+*/
 
 
 
-
-
-  public void formandMenu(Scanner scan) {
+  public static void formandMenu(Scanner scan) {
     //TODO: opdater
     System.out.println("Tryk 1 for at oprette medlem");
-    System.out.println("Tryk 2 for at gå tilbage");
+    System.out.println("Tryk 2 for at se en liste med medlemmer");
+    System.out.println("Tryk 3 for at lukke programmet");
+    System.out.println("Tryk 4 for at gå tilbage");
 
     Formand formand = new Formand();
-    int indtastFormand = scan.nextInt();
+    int indtastFormand = Integer.parseInt(scan.nextLine());
     System.out.println(indtastFormand);
 
     switch (indtastFormand) {
@@ -33,17 +46,20 @@ public class Menu {
 
         break;
       case 2:
-        formand.læsListe();
+        System.out.println(Storage.getMedlemmer());
         break;
       case 3:
+        shutdown();
+        break;
+      case 4:
         break;
       default:
     }
   }
 
 
-  public void kassererMenu(Scanner scan) {
-    System.out.println("Tryk 1 for kontingent");
+  public static void kassererMenu(Scanner scan) {
+    System.out.println("Tryk 1 for at se samlet kontingentindbetaling");
     System.out.println("Tryk 2 for oversigt over medlem i restance");
     System.out.println("Tryk 3 for at gå tilbage");
 
@@ -53,6 +69,7 @@ public class Menu {
     switch (indtastKasserer) {
 
       case 1:
+
         break;
       case 2:
         break;
@@ -94,7 +111,6 @@ public class Menu {
     switch (indtastTræner1) {
 
       case 1:
-
         break;
       case 2:
         break;
@@ -110,6 +126,10 @@ public class Menu {
     }
   }
 
+  private static void shutdown(){
+    Storage.saveStorage();
+    System.exit(0);
+  }
 }
 
 

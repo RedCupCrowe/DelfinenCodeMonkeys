@@ -29,10 +29,33 @@ public class Medlem {
       overAtten = false;
       medlemstype = "junior";
     }
-
-
-
   }
+
+  public Medlem(String member){
+    String[] params = member.split(":");
+    this.navn = params[0];
+    this.alder = Integer.parseInt(params[1]);
+    this.aktivStatus = Boolean.parseBoolean(params[2]);
+    this.medlemsnummer = Integer.parseInt(params[3]);
+    this.iRestance = Boolean.parseBoolean(params[4]);
+
+    if (alder >= 18 ){
+      overAtten = true;
+      medlemstype = "senior";
+    } else {
+      overAtten = false;
+      medlemstype = "junior";
+    }
+  }
+
+
+
+
+
+  public String skrivMedlem(){
+    return navn + ":" + alder + ":" + aktivStatus + ":" + medlemsnummer + ":" + iRestance;
+  }
+
   public void setNavn(String navn){
     this.navn = navn;
 
