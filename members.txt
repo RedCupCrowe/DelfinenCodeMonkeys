@@ -1,3 +1,4 @@
 Valdemar:25:true:1337:false
 Christian:25:false:69:true
 Mark:9000:true:420:true
+David:696:true:2:true

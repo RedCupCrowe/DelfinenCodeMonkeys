@@ -13,18 +13,39 @@ public class Kasserer {
     For passivt medlemskab er taksten 500kr. årligt. Kassereren vil gerne kunne danne sig et overblik over hvor meget klubben kan forvente at få indbetalt i kontingent i alt.
     Kassereren har desuden ønsket, at systemet kan vise en oversigt over medlemmer, der er i restance.
     */
-/*Medlem Kasserer = new Medlem();
-*/
-  //TODO: Kasserer skal kunne se en oversigt over medlemmer i restance.
-  //TODO: Kasserer skal kunne se en udregning over hvor meget de kan forvente at få indbetalt i kontingent (dvs. uden dem der er i restance).
-public int seIndtægt(MedlemsListe medlemsListe){
+    /*Medlem Kasserer = new Medlem();
+     */
 
-    for (Medlem m ; !m.getIRestance(); medlemsListe.getMedlemmer()){
-        m.getKontingent();
+
+    public ArrayList<Medlem> getMedlemmerIRestance(MedlemsListe medlemsListe) {
+        // TODO:o
+        // - lav en ny arrayliste af medlemmer (tom til at starte med)
+        ArrayList<Medlem> medlems = new ArrayList<>();
+        // - gå igennem alle medlemmer i medlemsListe
+        for (Medlem m : medlemsListe.getMedlemmer())
+            if (m.getIRestance() == true){
+                medlems.add(m);
+
+            }
+        // - kopier medlemmet hvis det er i restance til den nye liste
+        // - returner den nye liste
+        return medlems;
     }
-    int totalIndbetaling = medlemsListe.getMedlemmer()
-    return totalIndbetaling;
-}
+
+    //TODO: Kasserer skal kunne se en oversigt over medlemmer i restance.
+    //TODO: Kasserer skal kunne se en udregning over hvor meget de kan forvente at få indbetalt i kontingent (dvs. uden dem der er i restance).
+    public static int seIndtægt(MedlemsListe medlemsListe) {
+
+        int totalIndbetaling = 0;
+        for (Medlem m : medlemsListe.getMedlemmer()) {
+            if (!m.getIRestance()) {
+                totalIndbetaling = totalIndbetaling + m.getKontingent();
+
+            }
+        }
+
+        return totalIndbetaling;
+    }
 
 }
 
