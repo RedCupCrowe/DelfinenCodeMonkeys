@@ -17,12 +17,12 @@ public class Kasserer {
      */
 
 
-    public ArrayList<Medlem> getMedlemmerIRestance(MedlemsListe medlemsListe) {
+    public static ArrayList<Medlem> getMedlemmerIRestance(ArrayList<Medlem> medlemmer) {
         // TODO:o
         // - lav en ny arrayliste af medlemmer (tom til at starte med)
         ArrayList<Medlem> medlems = new ArrayList<>();
         // - gå igennem alle medlemmer i medlemsListe
-        for (Medlem m : medlemsListe.getMedlemmer())
+        for (Medlem m : medlemmer)
             if (m.getIRestance() == true){
                 medlems.add(m);
 
@@ -34,10 +34,10 @@ public class Kasserer {
 
     //TODO: Kasserer skal kunne se en oversigt over medlemmer i restance.
     //TODO: Kasserer skal kunne se en udregning over hvor meget de kan forvente at få indbetalt i kontingent (dvs. uden dem der er i restance).
-    public static int seIndtægt(MedlemsListe medlemsListe) {
+    public static int seIndtægt(ArrayList<Medlem> medlemmer) {
 
         int totalIndbetaling = 0;
-        for (Medlem m : medlemsListe.getMedlemmer()) {
+        for (Medlem m : medlemmer) {
             if (!m.getIRestance()) {
                 totalIndbetaling = totalIndbetaling + m.getKontingent();
 

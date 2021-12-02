@@ -70,14 +70,15 @@ Sørge for at formanden kan ændre i medlem. Evt. bare sørge for at man kan sle
         System.out.println("Tryk 2 for oversigt over medlem i restance");
         System.out.println("Tryk 3 for at gå tilbage");
 
-        int indtastKasserer = scan.nextInt();
-        System.out.println(indtastKasserer);
+        int indtastKasserer = Integer.parseInt(scan.nextLine());
 
         switch (indtastKasserer) {
 
             case 1:
+                System.out.println(Kasserer.seIndtægt(Storage.getMedlemmer()));;
                 break;
             case 2:
+                System.out.println(Kasserer.getMedlemmerIRestance(Storage.getMedlemmer()));
                 break;
             case 3:
                 break;
@@ -91,7 +92,6 @@ Sørge for at formanden kan ændre i medlem. Evt. bare sørge for at man kan sle
         System.out.println("Tryk 3 for at gå tilbage");
 
         int indtastTræner = Integer.parseInt(scan.nextLine());
-        System.out.println(indtastTræner);
 
         switch (indtastTræner) {
 
