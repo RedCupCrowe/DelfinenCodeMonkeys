@@ -1,7 +1,5 @@
 package Medlemmer;
 
-import Bruger.Formand;
-
 import java.util.ArrayList;
 
 public class KonkurrenceMedlem extends Medlem {
