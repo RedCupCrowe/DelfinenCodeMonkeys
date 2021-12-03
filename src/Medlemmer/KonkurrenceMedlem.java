@@ -65,16 +65,12 @@ public class KonkurrenceMedlem extends Medlem {
 
     }
 
-    //TODO: find en måde at lave en tostring på et arraylist.
     public void registrerKonkurrenceResultat(KonkurrenceResultat resultat) {
         if (!konkurrenceResultater.contains(resultat)) {
             konkurrenceResultater.add(resultat);
         }
     }
 
-    //TODO: lav override til konkurrencemedlem, da den skal have mere information med.
-    // evt. navn:alder:status:nr:restance:butterflytid:crawltid:rygcrawltid:brysttid:stævne,svømmetid,placering;stævne,svømmetid,placering;stævne,svømmetid,placering;
-    @Override
     public String skrivMedlem() {
         String str = getNavn() + ":" + getAlder() + ":" + getAktivStatus() + ":" + getMedlemsnummer() + ":" + getIRestance() + ":";
         if (butterflyTid == null){
