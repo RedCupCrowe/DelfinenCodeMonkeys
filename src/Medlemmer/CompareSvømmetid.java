@@ -1,3 +1,5 @@
+//Samarbejde mellem Valdemar og Johannes
+
 package Medlemmer;
 
 import java.util.Comparator;

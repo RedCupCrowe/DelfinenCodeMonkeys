@@ -1,3 +1,5 @@
+//Alle i gruppen har arbejdet med denne klasse, men sidste ansvar lå hos Naomi og Frederik.
+
 package Menuer;
 
 import Brugere.Formand;
@@ -9,21 +11,6 @@ import Storage.Storage;
 import java.util.Scanner;
 
 public class Menu {
-
-  /*
-Træner skal kunne registrere discipliner på konkurrencemedlemmer.
-Kasserer skal kunne se en oversigt over medlemmer i restance.
-Kasserer skal kunne se en udregning over hvor meget de kan forvente at få indbetalt i kontingent (dvs. uden dem der er i restance).
-TODO: Menuerne skal forbindes. ved hvordan laves, skal bare gøres.
-Et kig på grasp.
-Mulighed for træner for at se top 5 for hver svømmedisciplin fordelt på henholdsvis junior- og seniorsvømmere.
-registrere stævne- og træningstider og forbinde dem til hvert medlem.
-Gøre så listen med medlemmer ikke bliver slettet hver gang vi genstarter programmet.
-Gøre så vi kan åbne filen uden for IntelliJ.
-Sørge for at formanden kan ændre i medlem. Evt. bare sørge for at man kan slette medlemmer.
-
-*/
-
 
   public static void formandMenu(Scanner scan) {
     System.out.println("Tryk 1 for at oprette medlem");

@@ -1,3 +1,5 @@
+//Naomi og Johannes er dem der primært har stået for Storage.
+
 package Storage;
 
 import Medlemmer.KonkurrenceMedlem;

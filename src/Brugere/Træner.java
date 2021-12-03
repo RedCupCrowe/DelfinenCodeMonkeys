@@ -1,3 +1,5 @@
+//Valdemar har været lavet mest i træner, men har fået hjælp og input fra alle i gruppen.
+
 package Brugere;
 
 import Medlemmer.*;
@@ -7,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Træner {
-//TODO: Mulighed for træner for at se top 5 for hver svømmedisciplin fordelt på henholdsvis junior- og seniorsvømmere.
 
 
   private static void printSvømmere() {

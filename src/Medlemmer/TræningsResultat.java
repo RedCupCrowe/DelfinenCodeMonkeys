@@ -1,3 +1,5 @@
+//samarbejde mellem Valdemar og Johannes
+
 package Medlemmer;
 
 public class TræningsResultat {

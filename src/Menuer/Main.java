@@ -1,3 +1,5 @@
+//Naomi og Frederik har i fællesskab lavet Main og forbundet den med Menu
+
 package Menuer;
 
 import Storage.Storage;

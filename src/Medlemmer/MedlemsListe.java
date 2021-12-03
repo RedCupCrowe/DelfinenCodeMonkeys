@@ -1,3 +1,5 @@
+//Naomi stod for medlemslisten.
+
 package Medlemmer;
 
 import java.util.ArrayList;

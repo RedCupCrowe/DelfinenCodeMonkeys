@@ -1,3 +1,5 @@
+//Johannes har været primus motor på formand, men alle har været inde over.
+
 package Brugere;
 
 import Medlemmer.KonkurrenceMedlem;

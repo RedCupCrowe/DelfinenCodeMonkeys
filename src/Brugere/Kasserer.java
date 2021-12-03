@@ -1,3 +1,5 @@
+//Frederik har lavet mest i kasserer, men alle har bidraget med input.
+
 package Brugere;
 
 import Medlemmer.Medlem;

@@ -1,3 +1,5 @@
+//Naomi og Frederik har stået for det meste af Medlem, med input fra gruppen.
+
 package Medlemmer;
 
 import java.util.ArrayList;

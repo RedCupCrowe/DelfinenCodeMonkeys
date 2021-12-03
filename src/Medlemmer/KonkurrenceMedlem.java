@@ -1,3 +1,5 @@
+//Valdemar har stået for det meste af KonkurrenceMedlem
+
 package Medlemmer;
 
 import java.util.ArrayList;
